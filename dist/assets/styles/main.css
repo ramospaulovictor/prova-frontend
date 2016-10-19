@@ -1,0 +1,234 @@
+@-ms-viewport {
+    width: device-width;
+    zoom: 1;
+    min-zoom: 0.5;
+    max-zoom: 4;
+}
+@viewport {
+    width: device-width;
+    zoom: 1;
+    min-zoom: 0.5;
+    max-zoom: 4;
+}
+
+*{
+	border: 0;
+	margin: 0;
+	padding: 0;
+	font-size: calc(100.5% + 0.20vw);
+	list-style: none;
+	vertical-align: baseline;
+    font-family: 'Lato', sans-serif;
+}
+.uppercase{
+	text-transform: uppercase;
+}
+.container{
+	max-width: 1370px; /*largura da img-topo*/
+    width: 100%;
+	margin: 0 auto;
+}
+.text-center{
+	text-align: center;
+}
+header{
+	background: url('../images/layout-topo.jpg') no-repeat scroll center top;
+	background-size: cover;
+    height: 660px;
+	position: relative;
+}
+header h1{
+	position: absolute;
+    right: 0;
+    top: 40%;
+    font-weight: 300;
+    font-size: 140%;
+    width: 45%;
+    max-width: 18ch;
+    padding: 1em;
+    background-color: rgba(15, 96, 87,.65);
+    color: #fff;
+}
+.premios{
+	background-color: #18a292;
+}
+.premios .chamada{
+	background-color: #a2c108;
+	position: relative;
+}
+.premios .chamada p{
+    padding: 1.3em;
+    font-weight: bold;
+    color: #003d43;
+}
+
+.premios .chamada::after {
+	content: "";
+    display: block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #a2c108;
+}
+figcaption{
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 23px;
+    margin-top: .65em;
+    font-size: 80%;
+}
+figcaption span{
+    font-weight: 300;
+    font-size: 75%;
+    line-height: 20px;
+}
+.conteudo{
+    /*display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 2.5em 3em;*/
+    margin: 3em 0;
+}
+#descricao{
+	max-width: 100%;
+    font-size: 75%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 4.5%;
+}
+#descricao h3{
+	color: #fff;
+    background-image: none;
+    font-size: 80%;
+    margin: 1px 0 0 0;
+    border: none;
+    border-radius: 0;
+}
+#descricao h3:focus{
+	outline: none;
+}
+
+.ui-accordion-header-icon{
+	position: absolute !important;
+    right: 1em;
+    top: 40%;
+}
+
+.ui-state-default{
+    background-color: #18a292 ;
+}
+.ui-accordion-header-active{
+    background-color: #107065 !important;
+}
+.ui-accordion-content{
+    background-color: #ededed !important;
+    border: 0 !important;
+    border-radius: 0;
+    padding: 0 .5em !important;
+}
+.ui-accordion-content p{
+    margin: 1em 0;
+    font-size: 75%;
+}
+
+.contato{
+    width: 30%;
+    border-radius: 15px;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 55%;
+    margin: 0 4.5%;
+    max-width: 100%;
+    box-shadow: 0px 5px 5px -1px #dedede;
+    
+}
+.contato .header-form{
+    background: #107065;
+    color: #fff;
+    padding: .75em 1em;
+}
+.contato .header-form h3 + p{ /* pega somente o primeiro p após o h3*/
+    font-weight: 300;
+}
+form{
+    padding: 2em;
+}
+form input, form textarea{
+    border-bottom: 1px solid #868686;
+    width: 100%;
+    margin: .5em 0;
+    padding: .25em;
+}
+form input, form textarea:focus{
+    outline: none;
+}
+
+form textarea{
+    resize: none;
+}
+form input[type='submit']{
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #a2c108;
+    color: #164b3f;
+    width: 70%;
+    font-weight: bold;
+    border: 0;
+    border-radius: 5px;
+    padding: .5em;
+    display: block;
+    margin: 2em auto 0 auto;
+    transition: all 1s linear;
+    -webkit-transition: all .2s linear;
+}
+form input[type='submit']:hover{
+    background-color: #107065;
+    color: #fff;
+    box-shadow: 0 0 10px #555;
+}
+
+label.error{
+    color: red;
+    font-size: 90%;
+}
+
+footer{
+	background-color: #1d353e;
+}
+footer p{
+    color: rgba(255,255,255,.6);
+    padding: 5em;
+    font-size: 75%;
+}
+
+
+/************* MEDIA QUERIES *************/
+
+/* < 768px */
+@media screen and (max-width: 767px) {
+    /* para formatos menores que tablets, o conteudo ocupa toda tela */
+    .resp-sm-12{
+        display: block;
+        margin-top: 3em;
+        width: 90%;
+    }
+    .bx-wrapper{
+        padding: 2em 4em;
+    }
+}
+@media screen and (min-width: 768px) {
+    /* para formatos maiores que tablets, o conteudo volta divide a tela */
+    #descricao{
+        width: 50%;
+    }
+}
+
